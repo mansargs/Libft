@@ -5,12 +5,15 @@ void *ft_memset(void *s, int c, size_t n)
     unsigned char *ptr = (unsigned char *)s;  
     unsigned char ch = (unsigned char)c;       
 
-    for (size_t i = 0; i < n; ++i)
-        ptr[i] = ch; 
+    while(n--)
+    {
+        *ptr = ch;
+        ptr++;
+    } 
 
     return s;  
 }
-
+/*
 #include <stdio.h>
 #include <string.h>
 #include <assert.h>
@@ -68,3 +71,4 @@ int main() {
     test_ft_memset();
     return 0;
 }
+*/

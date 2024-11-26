@@ -4,13 +4,15 @@ void *ft_calloc(size_t  count, size_t size)
 {
     size_t i;
 
-    void *mem = malloc(count*size);
+
+    unsigned char *mem = malloc(count*size);
     if (mem  == NULL)
         return (NULL);
-    i = -1;    
-    while (++i < count)
+    i = 0;    
+    while (i < count)
     {
         *(mem + i) = 0;
+        ++i;
     }
-    return (mem);
+    return ((void *)mem);
 }
