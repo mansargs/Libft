@@ -1,5 +1,3 @@
-#include <stdio.h>
-
 void *ft_memccpy(void *dest, const void *source, int c, size_t n)
 {
     unsigned char *dst = (unsigned char *)dest;
