@@ -6,9 +6,11 @@
 /*   By: mansargs <mansargs@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/13 18:03:13 by mansargs          #+#    #+#             */
-/*   Updated: 2025/01/13 18:05:00 by mansargs         ###   ########.fr       */
+/*   Updated: 2025/01/13 19:42:44 by mansargs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_isdigit(char *str)
 {

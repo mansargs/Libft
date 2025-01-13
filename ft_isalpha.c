@@ -6,9 +6,11 @@
 /*   By: mansargs <mansargs@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/13 17:49:55 by mansargs          #+#    #+#             */
-/*   Updated: 2025/01/13 18:02:33 by mansargs         ###   ########.fr       */
+/*   Updated: 2025/01/13 19:42:34 by mansargs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_isalpha(char *str)
 {
