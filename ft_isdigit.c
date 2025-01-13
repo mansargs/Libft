@@ -6,7 +6,7 @@
 /*   By: mansargs <mansargs@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/13 18:03:13 by mansargs          #+#    #+#             */
-/*   Updated: 2025/01/13 19:42:44 by mansargs         ###   ########.fr       */
+/*   Updated: 2025/01/13 20:16:16 by mansargs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	ft_isdigit(char *str)
 	int	i;
 
 	i = -1;
-	if (str == 0 || str[0] == '\0')
+	if (str == NULL || str[0] == '\0')
 		return (0);
 	while (str[++i])
 	{

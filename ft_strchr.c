@@ -6,23 +6,11 @@
 /*   By: mansargs <mansargs@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/13 19:29:57 by mansargs          #+#    #+#             */
-/*   Updated: 2025/01/13 19:54:55 by mansargs         ###   ########.fr       */
+/*   Updated: 2025/01/13 21:25:43 by mansargs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-size_t	ft_strlen(const char *str)
-{
-	int	i;
-
-	if (!str)
-		return (0);
-	i = 0;
-	while (str[i])
-		++i;
-	return (i);
-}
 
 char	*ft_strchr(const char *str, int c)
 {

@@ -6,7 +6,7 @@
 /*   By: mansargs <mansargs@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/13 17:49:55 by mansargs          #+#    #+#             */
-/*   Updated: 2025/01/13 19:42:34 by mansargs         ###   ########.fr       */
+/*   Updated: 2025/01/13 20:32:04 by mansargs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	ft_isalpha(char *str)
 	int	i;
 
 	i = -1;
-	if (str == 0 || str[0] == 0)
+	if (str == NULL || str[0] == '\0')
 		return (0);
 	while (str[++i])
 	{

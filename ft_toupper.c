@@ -6,68 +6,58 @@
 /*   By: mansargs <mansargs@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/13 19:33:24 by mansargs          #+#    #+#             */
-/*   Updated: 2025/01/13 19:57:27 by mansargs         ###   ########.fr       */
+/*   Updated: 2025/01/13 21:20:53 by mansargs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_toupper(char *str)
+int	ft_toupper(int ch)
 {
-	int	i;
+	char	c;
 
-	i = -1;
-	if (str == 0 || str[0] == '\0')
-		return (str);
-	while (str[++i])
-	{
-		if (str[i] >= 'a' && str[i] <= 'z')
-			str[i] -= 32;
-	}
-	return (str);
+	c = (unsigned char)ch;
+	if (c > 96 && c < 123)
+		return (ch - 32);
+	return (ch);
 }
-
 /*
-#include <ctype.h>
 #include <stdio.h>
-#include <string.h>
+#include <ctype.h> // For comparison with the standard toupper
 
-char	*ft_toupper(char *str);
+int main(void)
+{
+    // Array of test cases
+    int test_cases[] = {
+        'a', 'z',       // Lowercase letters
+        'A', 'Z',       // Uppercase letters
+        '0', '9',       // Digits
+        '!', '@', '#',  // Symbols
+        EOF,            // End of File
+        -1, 128, 255    // Edge cases outside ASCII range
+    };
 
-void	test_ft_toupper(void) {
-	// Test case 1: Normal string with lowercase letters
-	char str1[] = "hello world";
-	char expected1[] = "HELLO WORLD";
-	ft_toupper(str1);
-	printf("Test 1 %s\n", strcmp(str1, expected1) == 0 ? "passed" : "failed");
+    int num_cases = sizeof(test_cases) / sizeof(test_cases[0]);
 
-	// Test case 2: String with mixed case and symbols
-	char str2[] = "HeLLo, WoRLD!";
-	char expected2[] = "HELLO, WORLD!";
-	ft_toupper(str2);
-	printf("Test 2 %s\n", strcmp(str2, expected2) == 0 ? "passed" : "failed");
+    printf("Testing ft_toupper against standard toupper:\n");
+    printf("-------------------------------------------------\n");
+    printf("| Input    | ft_toupper | toupper    | Matches? |\n");
+    printf("-------------------------------------------------\n");
 
-	// Test case 3: String with numbers and special characters
-	char str3[] = "123!@# abc DEF";
-	char expected3[] = "123!@# ABC DEF";
-	ft_toupper(str3);
-	printf("Test 3 %s\n", strcmp(str3, expected3) == 0 ? "passed" : "failed");
+    for (int i = 0; i < num_cases; i++)
+    {
+        int input = test_cases[i];
+        int ft_result = ft_toupper(input);
+        int std_result = toupper(input);
 
-	// Test case 4: Empty string
-	char str4[] = "";
-	char expected4[] = "";
-	ft_toupper(str4);
-	printf("Test 4 %s\n", strcmp(str4, expected4) == 0 ? "passed" : "failed");
+        printf("| %-8d | %-10d | %-10d | %-8s |\n",
+               input,
+               ft_result,
+               std_result,
+               (ft_result == std_result) ? "Yes" : "No");
+    }
 
-	// Test case 5: String with only uppercase letters
-	char str5[] = "ALL CAPS";
-	char expected5[] = "ALL CAPS";
-	ft_toupper(str5);
-	printf("Test 5 %s\n", strcmp(str5, expected5) == 0 ? "passed" : "failed");
-}
-
-int	main(void) {
-	test_ft_toupper();
-	return (0);
+    printf("-------------------------------------------------\n");
+    return 0;
 }
 */
