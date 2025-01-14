@@ -3,49 +3,40 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mansargs <mansargs@student.42.fr>          +#+  +:+       +#+        */
+/*   By: manvel <manvel@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/13 19:30:45 by mansargs          #+#    #+#             */
-/*   Updated: 2025/01/13 19:55:35 by mansargs         ###   ########.fr       */
+/*   Updated: 2025/01/14 19:13:31 by manvel           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *str)
+size_t	ft_strlcat(char *dst,const char *src, size_t dstsize)
 {
 	size_t	i;
+	size_t	j;
+	size_t	src_len;
+	size_t	dst_len;
 
 	i = 0;
-	while (str[i])
-		++i;
-	return (i);
-}
-
-size_t	ft_strlcat(char *dst, char *src, size_t dstsize)
-{
-	size_t	i = 0, j;
-
-	i = 0, j = 0, strlen_src, strlen_dst;
+	j = 0;
 	if (dst == NULL || src == NULL)
 		return (0);
-	strlen_dst = ft_strlen(dst);
-	strlen_src = ft_strlen(src);
-	i = strlen_dst;
-	if (strlen_dst >= dstsize)
-		return (dstsize + strlen_src);
+	src_len = ft_strlen((const char *) dst);
+	dst_len = ft_strlen(src);
+	i = src_len;
+	if (src_len >= dstsize)
+		return (dstsize + src_len);
 	while (src[j] && (i < dstsize - 1))
 		dst[i++] = src[j++];
 	dst[i] = '\0';
-	return (strlen_dst + strlen_src);
+	return (src_len + dst_len);
 }
 
 /*
 #include <stdio.h>
 #include <string.h>
-
-// Include your custom ft_strlcat function prototype here
-size_t	ft_strlcat(char *dst, char *src, size_t dstsize);
 
 void	test_strlcat_size_0(void) {
 	char dst[10] = "Hello";

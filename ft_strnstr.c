@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mansargs <mansargs@student.42.fr>          +#+  +:+       +#+        */
+/*   By: manvel <manvel@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/13 19:32:11 by mansargs          #+#    #+#             */
-/*   Updated: 2025/01/13 19:56:47 by mansargs         ###   ########.fr       */
+/*   Updated: 2025/01/14 21:08:09 by manvel           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ char	*ft_strnstr(const char *str, const char *to_find, size_t len)
 			j = 0;
 		if (*(to_find + j) == '\0')
 			return ((char *)(str + i - j + 1));
-		i++;
+		++i;
 	}
 	return (NULL);
 }
