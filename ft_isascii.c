@@ -3,33 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mansargs <mansargs@student.42.fr>          +#+  +:+       +#+        */
+/*   By: manvel <manvel@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/13 19:24:33 by mansargs          #+#    #+#             */
-/*   Updated: 2025/01/13 19:42:40 by mansargs         ###   ########.fr       */
+/*   Updated: 2025/01/16 23:30:30 by manvel           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isascii(char *str)
+int	ft_isascii(int c)
 {
-	int	i;
-
-	i = -1;
-	while (str[++i])
-	{
-		if ((unsigned char)str[i] > 127)
-			return (0);
-	}
+	if (c > 127 || c < 0)
+		return (0);
 	return (1);
 }
-/*
-#include <stdio.h>
-
-int	main(void)
-{
-	printf("isascii : %d\n", ft_isascii("sifsu,syhd€ $5dw8"));
-	return (0);
-}
-*/

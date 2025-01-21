@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mansargs <mansargs@student.42.fr>          +#+  +:+       +#+        */
+/*   By: manvel <manvel@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/13 19:29:10 by mansargs          #+#    #+#             */
-/*   Updated: 2025/01/13 19:43:55 by mansargs         ###   ########.fr       */
+/*   Updated: 2025/01/15 21:25:18 by manvel           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	char	X[10];
+	char	x[10];
 	int		i;
 
 	i = 0;
@@ -30,10 +30,10 @@ void	ft_putnbr_fd(int n, int fd)
 	}
 	while (n / 10 != 0)
 	{
-		X[i++] = (n % 10) + '0';
+		x[i++] = (n % 10) + '0';
 		n /= 10;
 	}
-	X[i] = n + '0';
+	x[i] = n + '0';
 	while (i >= 0)
-		write(fd, X + i--, 1);
+		write(fd, x + i--, 1);
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mansargs <mansargs@student.42.fr>          +#+  +:+       +#+        */
+/*   By: manvel <manvel@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/13 19:24:09 by mansargs          #+#    #+#             */
-/*   Updated: 2025/01/13 19:42:06 by mansargs         ###   ########.fr       */
+/*   Updated: 2025/01/16 23:38:32 by manvel           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,13 @@
 void	ft_bzero(void *buffer, size_t n)
 {
 	unsigned char	*ptr;
+	size_t			i;
 
-	if (buffer == NULL || n == 0)
-		return ;
 	ptr = (unsigned char *)buffer;
-	while (n--)
-		*ptr++ = '\0';
+	i = 0;
+	while (i < n)
+	{
+		ptr[i] = '\0';
+		++i;
+	}
 }

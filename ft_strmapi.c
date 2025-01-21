@@ -3,45 +3,55 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mansargs <mansargs@student.42.fr>          +#+  +:+       +#+        */
+/*   By: manvel <manvel@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/13 19:31:29 by mansargs          #+#    #+#             */
-/*   Updated: 2025/01/13 19:56:26 by mansargs         ###   ########.fr       */
+/*   Updated: 2025/01/15 21:26:09 by manvel           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *str)
+int	len(char const *s, char (*f)(unsigned int, char))
 {
-	int	i;
+	unsigned int	i;
+	int				count;
 
-	if (str == NULL)
-		return (0);
 	i = 0;
-	while (str[i])
+	count = 0;
+	while (s[i])
+	{
+		if (f(i, s[i]) == 1)
+			++count;
 		++i;
-	return (i);
+	}
+	return (count);
 }
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	unsigned int	i;
-	unsigned int	len;
+	unsigned int	j;
+	unsigned int	size;
 	char			*res;
 
 	if (s == NULL || f == NULL)
 		return (NULL);
 	i = 0;
-	len = ft_strlen(s);
-	res = (char *)malloc((len + 1) * sizeof(char));
+	j = 0;
+	size = len(s, f);
+	res = (char *)malloc((size + 1) * sizeof(char));
 	if (res == NULL)
 		return (NULL);
-	while (i < len)
+	while (s[i])
 	{
-		res[i] = f(i, s[i]);
+		if (f(i, s[i]) == 1)
+		{
+			res[j] = f(i, s[i]);
+			++j;
+		}
 		++i;
 	}
-	res[len] = '\0';
+	res[j] = '\0';
 	return (res);
 }

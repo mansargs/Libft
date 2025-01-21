@@ -1,27 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strequ.c                                        :+:      :+:    :+:   */
+/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mansargs <mansargs@student.42.fr>          +#+  +:+       +#+        */
+/*   By: manvel <manvel@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/13 19:30:25 by mansargs          #+#    #+#             */
-/*   Updated: 2025/01/13 19:55:13 by mansargs         ###   ########.fr       */
+/*   Created: 2025/01/18 16:47:19 by manvel            #+#    #+#             */
+/*   Updated: 2025/01/18 16:51:58 by manvel           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strequ(const char *str1, const char *str2)
+void ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-	int	i;
-
-	i = -1;
-	if (str1 == NULL || str2 == NULL)
-		return (0);
-	while (str1[++i] && str2[i] && str1[i] == str2[i])
-		;
-	if (str1[i] != str2[i])
-		return (0);
-	return (1);
+    if (lst)
+    {
+        del(lst->content);
+        free(lst);
+        lst = NULL;
+    }
 }

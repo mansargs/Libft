@@ -3,35 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mansargs <mansargs@student.42.fr>          +#+  +:+       +#+        */
+/*   By: manvel <manvel@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/13 18:05:44 by mansargs          #+#    #+#             */
-/*   Updated: 2025/01/13 20:32:18 by mansargs         ###   ########.fr       */
+/*   Updated: 2025/01/16 23:26:28 by manvel           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalnum(char *str)
+int	ft_isalnum(int c)
 {
-	int	i;
-
-	i = -1;
-	if (str == NULL || str[0] == '\0')
+	if (c < '0' || (c > '9' && c < 'A') || (c > 'Z'
+			&& c < 'a') || c > 'z')
 		return (0);
-	while (str[++i])
-	{
-		if (str[i] < '0' || (str[i] > '9' && str[i] < 'A') || (str[i] > 'Z'
-				&& str[i] < 'a') || str[i] > 'z')
-			return (0);
-	}
 	return (1);
 }
-/*
-#include <stdio.h>
-
-int	main(void)
-{
-	printf("is alnum : %d\n", ft_isalnum("%vssvjnx"));
-}
-*/

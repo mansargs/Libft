@@ -1,25 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: manvel <manvel@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/13 19:30:05 by mansargs          #+#    #+#             */
-/*   Updated: 2025/01/14 17:27:23 by manvel           ###   ########.fr       */
+/*   Created: 2025/01/18 16:10:12 by manvel            #+#    #+#             */
+/*   Updated: 2025/01/18 16:11:40 by manvel           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strcpy(char *dest, const char *src)
+t_list *ft_lstlast(t_list *lst)
 {
-	int	i;
-
-	if (dest == NULL || src == NULL)
-		return (NULL);
-	i = -1;
-	while (src[++i])
-		dest[i] = src[i];
-	return (dest);
+    while (lst->next)
+        lst = lst->next;
+    return (lst);
 }

@@ -1,26 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striter.c                                       :+:      :+:    :+:   */
+/*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mansargs <mansargs@student.42.fr>          +#+  +:+       +#+        */
+/*   By: manvel <manvel@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/13 19:30:28 by mansargs          #+#    #+#             */
-/*   Updated: 2025/01/13 19:55:16 by mansargs         ###   ########.fr       */
+/*   Created: 2025/01/18 16:52:51 by manvel            #+#    #+#             */
+/*   Updated: 2025/01/18 17:09:09 by manvel           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_striter(char *s, void (*f)(char *))
+void ft_lstdelone(t_list **lst, void (*del)(void *))
 {
-	int	i;
+    t_list *next;
 
-	if (s == NULL || f == NULL)
-		return ;
-	i = -1;
-	while (s[++i])
-	{
-		f(s + i);
-	}
+    while(*lst)
+    {
+        del((*lst)->content);
+        free(*lst);
+        next = (*lst)->next
+    }
 }

@@ -1,22 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memdel.c                                        :+:      :+:    :+:   */
+/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mansargs <mansargs@student.42.fr>          +#+  +:+       +#+        */
+/*   By: manvel <manvel@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/13 19:28:33 by mansargs          #+#    #+#             */
-/*   Updated: 2025/01/13 19:43:27 by mansargs         ###   ########.fr       */
+/*   Created: 2025/01/18 15:41:04 by manvel            #+#    #+#             */
+/*   Updated: 2025/01/18 15:53:48 by manvel           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_memdel(void **ap)
+void ft_lstadd_front(t_list **lst, t_list *new)
 {
-	if (ap && *ap)
-	{
-		free(*ap);
-		*ap = NULL;
-	}
+    if (new)
+    {
+        new->next = *lst;
+        *lst = new;
+    }
 }

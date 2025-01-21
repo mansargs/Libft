@@ -6,7 +6,7 @@
 /*   By: manvel <manvel@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/13 17:35:54 by mansargs          #+#    #+#             */
-/*   Updated: 2025/01/14 20:44:43 by manvel           ###   ########.fr       */
+/*   Updated: 2025/01/15 22:09:14 by manvel           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int	ft_atoi(const char *str)
 		sign = -1;
 		++i;
 	}
-	if (str[i] == '+')
+	else if (str[i] == '+')
 		++i;
 	while (str[i] >= '0' && str[i] <= '9')
 		num = 10 * num + (str[i++] - 48);
