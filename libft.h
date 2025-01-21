@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: manvel <manvel@student.42.fr>              +#+  +:+       +#+        */
+/*   By: mansargs <mansargs@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/13 17:36:01 by mansargs          #+#    #+#             */
-/*   Updated: 2025/01/21 12:33:08 by manvel           ###   ########.fr       */
+/*   Updated: 2025/01/21 22:51:51 by mansargs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <stdlib.h>
 # include <unistd.h>
+
 typedef struct s_list
 {
 	void			*content;
@@ -55,11 +56,11 @@ void				ft_putstr_fd(char *s, int fd);
 void				ft_putnbr_fd(int n, int fd);
 char				*ft_itoa(int num);
 t_list				*ft_lstnew(void *content);
-void 				ft_lstadd_front(t_list **lst, t_list *new);
-int 				ft_lstsize(t_list *lst);
-t_list 				*ft_lstlast(t_list *lst);
-t_list 				*ft_lstlast(t_list *lst);
-void 				ft_lstadd_back(t_list **lst, t_list *new);
-void 				ft_lstdelone(t_list *lst, void (*del)(void *));
+void				ft_lstadd_front(t_list **lst, t_list *new);
+int					ft_lstsize(t_list *lst);
+t_list				*ft_lstlast(t_list *lst);
+t_list				*ft_lstlast(t_list *lst);
+void				ft_lstadd_back(t_list **lst, t_list *new);
+void				ft_lstdelone(t_list *lst, void (*del)(void *));
 
 #endif

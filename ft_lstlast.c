@@ -3,18 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: manvel <manvel@student.42.fr>              +#+  +:+       +#+        */
+/*   By: mansargs <mansargs@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/18 16:10:12 by manvel            #+#    #+#             */
-/*   Updated: 2025/01/18 16:11:40 by manvel           ###   ########.fr       */
+/*   Updated: 2025/01/21 18:57:07 by mansargs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list *ft_lstlast(t_list *lst)
+t_list	*ft_lstlast(t_list *lst)
 {
-    while (lst->next)
-        lst = lst->next;
-    return (lst);
+	while (lst->next)
+		lst = lst->next;
+	return (lst);
 }

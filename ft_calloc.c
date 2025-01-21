@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: manvel <manvel@student.42.fr>              +#+  +:+       +#+        */
+/*   By: mansargs <mansargs@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/13 19:24:21 by mansargs          #+#    #+#             */
-/*   Updated: 2025/01/17 00:14:17 by manvel           ###   ########.fr       */
+/*   Updated: 2025/01/21 21:52:39 by mansargs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,16 @@
 void	*ft_calloc(size_t count, size_t size)
 {
 	unsigned char	*mem;
+	size_t			i;
 
-	mem = malloc(count * size);
+	mem = (unsigned char *)malloc(count * size);
+	i = 0;
 	if (!mem)
 		return (NULL);
-	while (count--)
-		*mem++ = 0;
-	return ((void *)mem);
+	while (i < count * size)
+	{
+		*(mem + i) = 0;
+		++i;
+	}
+	return (mem);
 }

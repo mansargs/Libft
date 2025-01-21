@@ -3,27 +3,28 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: manvel <manvel@student.42.fr>              +#+  +:+       +#+        */
+/*   By: mansargs <mansargs@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/13 19:28:36 by mansargs          #+#    #+#             */
-/*   Updated: 2025/01/14 19:49:32 by manvel           ###   ########.fr       */
+/*   Updated: 2025/01/21 20:32:30 by mansargs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	unsigned char		*d;
 	const unsigned char	*s;
-	size_t				i;
+	int					i;
 
 	d = (unsigned char *)dest;
 	s = (const unsigned char *)src;
 	i = 0;
-	if (d == s || n == 0)
-		return (dest);
-	if ((s < d && (s + n) > d) || (d < s && (d + n) > s))
+	if (!dest || !src)
+		return (NULL);
+	if (dest > src)
 	{
 		while (n--)
 			*(d + n) = *(s + n);
@@ -38,3 +39,12 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
+/*
+
+int main()
+{
+	//char X[12];
+	char Y[15] = "42 Yerevan";
+	printf("Our return is %s\n", ft_memmove(Y + 3,Y,11));
+}
+*/
