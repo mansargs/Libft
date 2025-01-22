@@ -6,7 +6,7 @@
 /*   By: mansargs <mansargs@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/13 19:28:36 by mansargs          #+#    #+#             */
-/*   Updated: 2025/01/21 20:32:30 by mansargs         ###   ########.fr       */
+/*   Updated: 2025/01/22 19:04:48 by mansargs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,6 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	d = (unsigned char *)dest;
 	s = (const unsigned char *)src;
 	i = 0;
-	if (!dest || !src)
-		return (NULL);
 	if (dest > src)
 	{
 		while (n--)
