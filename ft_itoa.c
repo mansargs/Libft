@@ -6,13 +6,13 @@
 /*   By: mansargs <mansargs@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/13 19:28:05 by mansargs          #+#    #+#             */
-/*   Updated: 2025/01/21 19:16:09 by mansargs         ###   ########.fr       */
+/*   Updated: 2025/01/23 19:26:47 by mansargs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	count_char(int num)
+static size_t	count_char(int num)
 {
 	size_t	len;
 
@@ -27,7 +27,7 @@ size_t	count_char(int num)
 	return (len);
 }
 
-int	minus_case(char *str, int *len, int *num)
+static int	minus_case(char *str, int *len, int *num)
 {
 	int	limit;
 

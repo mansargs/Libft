@@ -6,7 +6,7 @@
 /*   By: mansargs <mansargs@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/13 19:32:16 by mansargs          #+#    #+#             */
-/*   Updated: 2025/01/23 17:10:20 by mansargs         ###   ########.fr       */
+/*   Updated: 2025/01/23 19:28:57 by mansargs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,12 +29,3 @@ char	*ft_strrchr(const char *str, int c)
 	}
 	return (last);
 }
-/*
-#include <stdio.h>
-
-int main ()
-{
-	printf("pointer to %c ------ > %p\n", '\0', ft_strrchr("teste", '\0'));
-	return (0);
-}
-*/

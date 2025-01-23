@@ -6,13 +6,13 @@
 /*   By: mansargs <mansargs@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/22 16:06:39 by mansargs          #+#    #+#             */
-/*   Updated: 2025/01/22 17:30:22 by mansargs         ###   ########.fr       */
+/*   Updated: 2025/01/23 19:27:58 by mansargs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	count_words(char const *s, char c)
+static size_t	count_words(char const *s, char c)
 {
 	int		inside_word;
 	size_t	len;
@@ -36,7 +36,7 @@ size_t	count_words(char const *s, char c)
 	return (len);
 }
 
-int	safe_malloc(char **split, int idx, size_t size)
+static int	safe_malloc(char **split, int idx, size_t size)
 {
 	int	i;
 
@@ -55,7 +55,7 @@ int	safe_malloc(char **split, int idx, size_t size)
 	return (1);
 }
 
-int	fill(char **split, char const *s, char c)
+static int	fill(char **split, char const *s, char c)
 {
 	size_t	len;
 	int		i;

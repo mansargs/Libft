@@ -6,7 +6,7 @@
 /*   By: mansargs <mansargs@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/13 19:28:36 by mansargs          #+#    #+#             */
-/*   Updated: 2025/01/23 15:52:41 by mansargs         ###   ########.fr       */
+/*   Updated: 2025/01/23 19:27:16 by mansargs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,12 +39,3 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
-/*
-
-int main()
-{
-	//char X[12];
-	char Y[15] = "42 Yerevan";
-	printf("Our return is %s\n", ft_memmove(Y + 3,Y,11));
-}
-*/

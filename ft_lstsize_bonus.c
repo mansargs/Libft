@@ -1,20 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstlast.c                                       :+:      :+:    :+:   */
+/*   ft_lstsize_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mansargs <mansargs@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/18 16:10:12 by manvel            #+#    #+#             */
-/*   Updated: 2025/01/21 18:57:07 by mansargs         ###   ########.fr       */
+/*   Created: 2025/01/18 15:57:50 by manvel            #+#    #+#             */
+/*   Updated: 2025/01/23 22:38:12 by mansargs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstlast(t_list *lst)
+int	ft_lstsize(t_list *lst)
 {
-	while (lst->next)
+	int	size;
+
+	size = 0;
+	while (lst)
+	{
+		++size;
 		lst = lst->next;
-	return (lst);
+	}
+	return (size);
 }
