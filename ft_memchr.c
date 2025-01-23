@@ -6,7 +6,7 @@
 /*   By: mansargs <mansargs@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/13 19:28:21 by mansargs          #+#    #+#             */
-/*   Updated: 2025/01/23 16:45:25 by mansargs         ###   ########.fr       */
+/*   Updated: 2025/01/23 18:07:22 by mansargs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,6 @@ void	*ft_memchr(const void *ptr, int value, size_t n)
 		return (NULL);
 	c = (unsigned char)value;
 	buffer = (const unsigned char *)ptr;
-	if (c == '\0')
-		return ((void *)buffer + ft_strlen((const char *)ptr));
 	while (n--)
 	{
 		if (*buffer == c)
