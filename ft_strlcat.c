@@ -6,7 +6,7 @@
 /*   By: mansargs <mansargs@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/13 19:30:45 by mansargs          #+#    #+#             */
-/*   Updated: 2025/01/21 21:37:30 by mansargs         ###   ########.fr       */
+/*   Updated: 2025/01/23 15:57:50 by mansargs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,6 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 
 	i = 0;
 	j = 0;
-	if (dst == NULL || src == NULL)
-		return (0);
 	src_len = ft_strlen(src);
 	dst_len = ft_strlen((const char *) dst);
 	i = dst_len;

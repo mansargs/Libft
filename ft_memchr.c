@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: manvel <manvel@student.42.fr>              +#+  +:+       +#+        */
+/*   By: mansargs <mansargs@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/13 19:28:21 by mansargs          #+#    #+#             */
-/*   Updated: 2025/01/14 20:08:58 by manvel           ###   ########.fr       */
+/*   Updated: 2025/01/23 16:00:47 by mansargs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,6 @@ void	*ft_memchr(const void *ptr, int value, size_t n)
 
 	c = (unsigned char)value;
 	buffer = (const unsigned char *)ptr;
-	if (ptr == NULL || n == 0)
-		return (NULL);
 	if (c == '\0')
 		return ((void *)buffer + ft_strlen((const char *)ptr));
 	while (n--)
@@ -66,7 +64,7 @@ int	main(void) {
 	test_memchr(str, 'H', 1);                    // Character at the start
 	test_memchr(str, '!', strlen(str));          // Character at the end
 	test_memchr(str, 'o', 0);                    // Length is zero
-	test_memchr(str, 'o', 5);                   
+	test_memchr(str, 'o', 5);
 		// Length less than total string length
 	test_memchr(empty_str, 'x', 10);             // Empty string
 	test_memchr(str, '\0', strlen(str) + 1);     // Null character search

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: manvel <manvel@student.42.fr>              +#+  +:+       +#+        */
+/*   By: mansargs <mansargs@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/13 19:32:16 by mansargs          #+#    #+#             */
-/*   Updated: 2025/01/14 21:46:21 by manvel           ###   ########.fr       */
+/*   Updated: 2025/01/23 16:00:04 by mansargs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,6 @@ char	*ft_strrchr(const char *str, int c)
 	unsigned char	search_char;
 
 	last = NULL;
-	if (str == NULL)
-		return (NULL);
 	search_char = (unsigned char)c;
 	if (c == '\0')
 		return ((char *)str + ft_strlen(str));
