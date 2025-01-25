@@ -32,11 +32,8 @@ $(NAME) : $(OBJECT)
 %.o : %.c $(INCLUDE)
 	$(CC) $(CFLAGS) -c $< -o $@
 
-bonus : $(BONUS_OBJ)
-	$(AR) $(ARFLAGS)  $(NAME) $(BONUS_OBJ)
-
-%.o : %.c $(INCLUDE)
-	$(CC) $(CFLAGS) -c $< -o $@
+bonus : $(OBJECT) $(BONUS_OBJ)
+	$(AR) $(ARFLAGS)  $(NAME) $(OBJECT) $(BONUS_OBJ)
 
 clean :
 	$(RM) $(OBJECT) $(BONUS_OBJ)
@@ -46,4 +43,4 @@ fclean : clean
 
 re : fclean all
 
-.PHONY : all  bonus clean fclean re
+.PHONY : all bonus clean fclean re

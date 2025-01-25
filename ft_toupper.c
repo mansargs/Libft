@@ -6,7 +6,7 @@
 /*   By: mansargs <mansargs@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/13 19:33:24 by mansargs          #+#    #+#             */
-/*   Updated: 2025/01/23 19:29:11 by mansargs         ###   ########.fr       */
+/*   Updated: 2025/01/25 21:11:24 by mansargs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,7 @@
 
 int	ft_toupper(int ch)
 {
-	char	c;
-
-	c = (unsigned char)ch;
-	if (c > 96 && c < 123)
+	if (ch > 96 && ch < 123)
 		return (ch - 32);
 	return (ch);
 }

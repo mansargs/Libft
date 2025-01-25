@@ -6,7 +6,7 @@
 /*   By: mansargs <mansargs@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/13 19:33:15 by mansargs          #+#    #+#             */
-/*   Updated: 2025/01/13 21:24:16 by mansargs         ###   ########.fr       */
+/*   Updated: 2025/01/25 21:11:17 by mansargs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,7 @@
 
 int	ft_tolower(int ch)
 {
-	char	c;
-
-	c = (unsigned char)ch;
-	if (c > 64 && c < 91)
+	if (ch > 64 && ch < 91)
 		return (ch + 32);
 	return (ch);
 }
