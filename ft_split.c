@@ -6,7 +6,7 @@
 /*   By: mansargs <mansargs@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/22 16:06:39 by mansargs          #+#    #+#             */
-/*   Updated: 2025/01/23 19:27:58 by mansargs         ###   ########.fr       */
+/*   Updated: 2025/01/26 14:39:09 by mansargs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,12 +74,12 @@ static int	fill(char **split, char const *s, char c)
 		if (len)
 		{
 			if (!safe_malloc(split, i, len + 1))
-				return (1);
+				return (0);
 			ft_strlcpy(split[i], s - len, len + 1);
 		}
 		++i;
 	}
-	return (0);
+	return (1);
 }
 
 char	**ft_split(char const *s, char c)
@@ -92,7 +92,7 @@ char	**ft_split(char const *s, char c)
 	if (split == NULL)
 		return (NULL);
 	split[len] = NULL;
-	if (fill(split, s, c))
+	if (!fill(split, s, c))
 		return (NULL);
 	return (split);
 }

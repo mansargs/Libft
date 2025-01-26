@@ -6,7 +6,7 @@
 /*   By: mansargs <mansargs@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/13 19:24:21 by mansargs          #+#    #+#             */
-/*   Updated: 2025/01/21 21:52:39 by mansargs         ###   ########.fr       */
+/*   Updated: 2025/01/26 14:28:07 by mansargs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,5 +26,5 @@ void	*ft_calloc(size_t count, size_t size)
 		*(mem + i) = 0;
 		++i;
 	}
-	return (mem);
+	return ((void *)mem);
 }
