@@ -6,12 +6,11 @@
 /*   By: mansargs <mansargs@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/13 19:28:36 by mansargs          #+#    #+#             */
-/*   Updated: 2025/01/26 13:51:34 by mansargs         ###   ########.fr       */
+/*   Updated: 2025/01/26 16:03:31 by mansargs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {

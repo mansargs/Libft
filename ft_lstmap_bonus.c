@@ -3,14 +3,12 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstmap_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: manvel <manvel@student.42.fr>              +#+  +:+       +#+        */
+/*   By: mansargs <mansargs@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/24 03:42:51 by manvel            #+#    #+#             */
-/*   Updated: 2025/01/24 04:30:49 by manvel           ###   ########.fr       */
+/*   Created: 2025/01/26 20:42:36 by mansargs          #+#    #+#             */
+/*   Updated: 2025/01/26 20:42:39 by mansargs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 #include "libft.h"
 

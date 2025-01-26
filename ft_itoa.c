@@ -6,7 +6,7 @@
 /*   By: mansargs <mansargs@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/13 19:28:05 by mansargs          #+#    #+#             */
-/*   Updated: 2025/01/23 19:26:47 by mansargs         ###   ########.fr       */
+/*   Updated: 2025/01/26 16:02:31 by mansargs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,61 +68,3 @@ char	*ft_itoa(int num)
 	}
 	return (str);
 }
-
-/*
-#include <limits.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-
-// Prototype for your ft_itoa function
-char	*ft_itoa(int n);
-
-void	test_itoa(int number, const char *expected) {
-	char *result = ft_itoa(number);
-	if (strcmp(result, expected) == 0) {
-		printf("PASS: %d -> %s\n", number, result);
-	} else {
-		printf("FAIL: %d -> %s (expected: %s)\n", number, result, expected);
-	}
-	free(result); // Freeing if ft_itoa uses malloc internally
-}
-
-int	main(void) {
-	// Edge cases
-	test_itoa(0, "0");                     // Zero case
-	test_itoa(INT_MAX, "2147483647");       // Maximum int value
-	test_itoa(INT_MIN, "-2147483648");      // Minimum int value
-
-	// Boundary values around zero
-	test_itoa(1, "1");
-	test_itoa(-1, "-1");
-
-	// Powers of ten
-	test_itoa(10, "10");
-	test_itoa(100, "100");
-	test_itoa(1000, "1000");
-	test_itoa(10000, "10000");
-
-	// Large negative numbers
-	test_itoa(-10, "-10");
-	test_itoa(-100, "-100");
-	test_itoa(-1000, "-1000");
-	test_itoa(-10000, "-10000");
-
-	// Random large positive and negative numbers
-	test_itoa(123456789, "123456789");
-	test_itoa(-123456789, "-123456789");
-
-	// Numbers with alternating digits
-	test_itoa(12121212, "12121212");
-	test_itoa(-12121212, "-12121212");
-
-	// Large sequences of the same digit
-	test_itoa(1111111111, "1111111111");
-	test_itoa(-1111111111, "-1111111111");
-
-	printf("All tests completed.\n");
-	return (0);
-}
-*/
