@@ -6,7 +6,7 @@
 /*   By: mansargs <mansargs@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/13 17:36:01 by mansargs          #+#    #+#             */
-/*   Updated: 2025/01/26 16:06:27 by mansargs         ###   ########.fr       */
+/*   Updated: 2025/01/27 21:09:10 by mansargs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ size_t		ft_strlcpy(char *dst, const char *src, size_t dstsize);
 size_t		ft_strlcat(char *dst, const char *src, size_t dstsize);
 void		ft_bzero(void *s, size_t n);
 void		*ft_memset(void *s, int c, size_t n);
-void		*ft_memcpy(void *s1, void const *s2, size_t n);
+void		*ft_memcpy(void *s1, const void *s2, size_t n);
 void		*ft_memmove(void *s1, const void *s2, size_t n);
 int			ft_memcmp(const void *s1, const void *s2, size_t n);
 void		*ft_memchr(const void *s, int c, size_t n);

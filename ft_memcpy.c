@@ -6,13 +6,13 @@
 /*   By: mansargs <mansargs@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/13 19:28:29 by mansargs          #+#    #+#             */
-/*   Updated: 2025/01/26 20:43:12 by mansargs         ###   ########.fr       */
+/*   Updated: 2025/01/27 20:47:10 by mansargs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dest, void const *source, size_t n)
+void	*ft_memcpy(void *dest, const void *source, size_t n)
 {
 	unsigned char	*dst;
 	unsigned char	*src;
