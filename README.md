@@ -35,7 +35,7 @@ Libft/
 
 1. **Clone the repository:**
    ```sh
-   git clone <your-repo-url>
+   git clone <git@github.com:mansargs/Libft.git>
    cd Libft
    ```
 
