@@ -77,7 +77,7 @@ Libft/
 You can write your own test files or use available testers for Libft (search for "libft tester" on GitHub).
 Example of compiling a test file:
 ```sh
-gcc -Wall -Wextra -Werror main.c -L. -lft -o test
+cc -Wall -Wextra -Werror main.c -L. -lft -o test
 ./test
 ```
 
