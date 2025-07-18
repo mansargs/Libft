@@ -8,7 +8,6 @@ Libft is a custom implementation of standard C library functions, developed as p
 - [Project Structure](#project-structure)
 - [Usage](#usage)
 - [Compiling](#compiling)
-- [Testing](#testing)
 - [Bonus Functions](#bonus-functions)
 - [Author](#author)
 
